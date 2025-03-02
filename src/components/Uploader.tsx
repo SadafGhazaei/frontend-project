@@ -1,6 +1,6 @@
-import { UploadOutlined } from '@ant-design/icons';
-import { Button, Upload } from 'antd';
-import React from 'react';
+import { UploadOutlined } from "@ant-design/icons";
+import { Button, Upload } from "antd";
+import React from "react";
 
 const Uploader = ({
   setFile,
@@ -27,18 +27,14 @@ const Uploader = ({
           setFile(file);
           return false;
         }}
-        onRemove={(file: unknown): boolean => {
-          setFile(undefined);
-          return true;
-        }}
         onChange={onChange}
         defaultFileList={
           defaultFileName
             ? [
                 {
-                  uid: '1',
+                  uid: "1",
                   url: defaultFileURL,
-                  name: defaultFileName ? defaultFileName : '',
+                  name: defaultFileName ? defaultFileName : "",
                 },
               ]
             : undefined

@@ -1,7 +1,7 @@
 import { Spin } from "antd";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { READ_SINGLE_MOVIE, POSTER_URL } from "../../api";
+import { READ_SINGLE_MOVIE } from "../../api";
 import fetchWrapper from "../../api/fetchWrapper";
 import ScrollToTop from "../../components/ScrollToTop";
 import Movie from "../../types/Movie";
@@ -35,7 +35,7 @@ const MainPage = (): React.ReactElement => {
     fetchMovie();
   }, [id, shouldRefresh]);
   const DEFAULT_POSTER =
-  "https://fastly.picsum.photos/id/218/200/300.jpg?hmac=S2tW-K1x-k9tZ7xyNVAdnie_NW9LJEby6GBgYpL7kfo";
+    "https://fastly.picsum.photos/id/218/200/300.jpg?hmac=S2tW-K1x-k9tZ7xyNVAdnie_NW9LJEby6GBgYpL7kfo";
 
   const getPosterUrl = (poster: string | undefined): string => {
     if (!poster) return DEFAULT_POSTER;

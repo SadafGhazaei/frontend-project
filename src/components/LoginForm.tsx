@@ -3,18 +3,12 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import fetchWrapper from "../api/fetchWrapper";
 
-/**
- * Interface for login response data
- */
+
 interface LoginResponse {
   message?: string;
   user?: { id: number; email: string; isAdmin: boolean };
 }
 
-/**
- * LoginForm component handles user authentication
- * @returns JSX.Element
- */
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");

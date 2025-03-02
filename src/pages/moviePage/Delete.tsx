@@ -12,7 +12,6 @@ const Delete = ({
   id: string | undefined;
   name: string | undefined;
 }): React.ReactElement => {
-  
   const [isVisible, setVisible] = useState<boolean>(false);
   const [isLoading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
@@ -39,21 +38,18 @@ const Delete = ({
       }
 
       if (response.status === 404) {
-        const data = await response.json();
-
         setLoading(false);
         return;
       }
 
       if (!response.ok) {
-        const data = await response.json();
         //throw new Error(data.message || "Failed to delete movie");
       }
     } catch (err) {
       setLoading(false);
 
       let errorMessage = "An unexpected error occurred";
-
+      console.log(errorMessage);
       if (err instanceof Error) {
         errorMessage = err.message;
       } else if (typeof err === "string") {

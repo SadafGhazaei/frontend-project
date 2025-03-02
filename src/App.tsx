@@ -9,6 +9,8 @@ import MoviePage from "./pages/moviePage/MainPage";
 import { ToastContainer } from "react-toastify";
 import LoginForm from "./components/LoginForm";
 
+const BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 function App(): React.ReactElement {
   return (
     <BrowserRouter>
