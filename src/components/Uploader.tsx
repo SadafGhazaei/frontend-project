@@ -27,18 +27,7 @@ const Uploader = ({
           setFile(file);
           return false;
         }}
-        onChange={onChange}
-        defaultFileList={
-          defaultFileName
-            ? [
-                {
-                  uid: "1",
-                  url: defaultFileURL,
-                  name: defaultFileName ? defaultFileName : "",
-                },
-              ]
-            : undefined
-        }
+   
       >
         <Button icon={<UploadOutlined />}>{title}</Button>
       </Upload>

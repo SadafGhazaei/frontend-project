@@ -41,7 +41,6 @@ const Delete = ({
         setLoading(false);
         return;
       }
-
       if (!response.ok) {
         //throw new Error(data.message || "Failed to delete movie");
       }

@@ -2,7 +2,7 @@ import React from "react";
 import Movie from "../../types/Movie";
 import { Table } from "antd";
 import { Link } from "react-router-dom";
-import { POSTER_URL } from "../../api";
+
 
 const DEFAULT_POSTER =
   "https://fastly.picsum.photos/id/218/200/300.jpg?hmac=S2tW-K1x-k9tZ7xyNVAdnie_NW9LJEby6GBgYpL7kfo";
